@@ -3,17 +3,17 @@ A starter template for project using Bottle/Postgres
 
 *Stack Information*
 
-* *Bottle 0.12*
-* *Postgres latest*
+* *bottle 0.12*
+* *postgres latest*
 
 
-## Prerequisites
+The prerequisites of using the starter template are the following:
 
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
 
-## Local Environment Setup
+## Local dev environment
 
 Get this starter template,
 ```bash
@@ -32,7 +32,7 @@ $ docker compose up
 
 Then visit `127.0.0.1:8080`
 
-## Postgres Container
+## Check Postgres container
 
 After docker compose is up, then you can enter the Postgres container. Open another terminal session and run
 
@@ -63,8 +63,7 @@ postgres=# \l
 
 To exit psql command line, type `\q` command.
 
-
-## Code Quality Control
+## More dev settings
 
 `pre-commit` is introduced into this project for code quality control.
 
@@ -76,8 +75,5 @@ to install packages for dev, including `pre-commit`.
 
 To customize pre-commit config, please update the `.pre-commit.config.yaml` file.
 
-## Note
 
-At the time of writing, `sqlalchemy` does not support `psycopg3` yet, so to use `psycopg2` here.
-
-If you are using any IDE, then configure the IDE to use this virtual environment.
+Happy coding!
