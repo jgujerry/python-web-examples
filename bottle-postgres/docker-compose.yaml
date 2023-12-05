@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  db:
+    image: "postgres:latest"
+    container_name: db
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - bottle_pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  app:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    image: bottle-postgresql
+    container_name: app
+    restart: on-failure
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=
+    volumes:
+      - .:/src
+    ports:
+      - "8080:8080"
+    command: "./compose/entrypoint.sh"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  bottle_pgdata:
