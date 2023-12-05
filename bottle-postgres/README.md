@@ -30,7 +30,7 @@ Run docker compose services,
 $ docker compose up
 ```
 
-Then visit `127.0.0.1:8080`
+Then visit [`127.0.0.1:8080`](http://127.0.0.1:8080)
 
 ## Check Postgres container
 
