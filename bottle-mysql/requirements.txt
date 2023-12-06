@@ -1,0 +1,4 @@
+cryptography>=41.0.1
+bottle>=0.12.25
+bottle-sqlalchemy>=0.4.3
+pymysql>=1.1.0

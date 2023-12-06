@@ -2,11 +2,12 @@
 
 A collection of starter templates making Python web development easy.
 
+* [bottle-mysql](bottle-mysql/README.md)
 * [bottle-postgres](bottle-postgres/README.md)
 
-*More starter templates will be coming ...*
+*More starter templates are coming on the way ...*
 
-Happy coding with Python web starters!
+Happy coding with Python Web Starters!
 
 
 ## Contribution
@@ -17,6 +18,8 @@ Starter template naming is in lower case with pattern
 ```
 {python-web-framework}-{something-to-highlight}
 ```
+
+Please see naming patterns above as examples.
 
 ## Contact
 
