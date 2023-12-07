@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  db:
+    image: "mysql:latest"
+    container_name: db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=devdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - django_mysql:/var/lib/mysql
+    networks:
+      - backend
+
+  app:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    image: django-mysql
+    container_name: app
+    restart: on-failure
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_PORT=3306
+      - MYSQL_DATABASE=devdb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
+      - DJANGO_SECRET_KEY="django-insecure-k#s1dm=s!!k@a2mnp(5a0%sn(e@mc!&b^@nudo9st+o+)#ltuh"
+    volumes:
+      - .:/src
+    ports:
+      - "8000:8000"
+    command: "./compose/entrypoint.sh"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  django_mysql:
