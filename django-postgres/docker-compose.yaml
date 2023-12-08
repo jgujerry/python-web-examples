@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  db:
+    image: "postgres:latest"
+    container_name: db
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - django_pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  app:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    image: django-postgres
+    container_name: app
+    restart: on-failure
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=
+      - DJANGO_SECRET_KEY="django-insecure-k#s1dm=wuTrAprit&avu_tOhO!rubrldrapruqAkapedrln!2e"
+    volumes:
+      - .:/src
+    ports:
+      - "8000:8000"
+    command: "./compose/entrypoint.sh"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  django_pgdata:

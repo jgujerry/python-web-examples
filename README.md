@@ -5,6 +5,7 @@ A collection of starter templates making Python web development easy.
 * [bottle-mysql](bottle-mysql/README.md)
 * [bottle-postgres](bottle-postgres/README.md)
 * [django-mysql](django-mysql/README.md)
+* [django-postgres](django-postgres/README.md)
 
 *More starter templates are coming on the way ...*
 
