@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: db
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
+    volumes:
+      - flask_pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  app:
+    container_name: app
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    volumes:
+      - .:/src/
+    ports:
+    - 5000:5000
+    environment:
+      - APP_SETTINGS=config.DevelopmentConfig
+      - DATABASE_URL=postgresql+psycopg2://flask_db_dev
+      - SECRET_KEY=abc123456
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - backend
+
+volumes:
+  flask_pgdata:
+
+networks:
+  backend:
+    driver: bridge

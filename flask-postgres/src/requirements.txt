@@ -1,0 +1,4 @@
+flask>=3.0.0
+flask-sqlalchemy>=3.0.5
+flask-migrate>=4.0.5
+psycopg2-binary>=2.9.6
