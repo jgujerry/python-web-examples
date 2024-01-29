@@ -4,7 +4,7 @@
 
 <p>
     Hello there, welcome! This is a starter template from
-    <a href="https://github.com/jgujerry/PythonWebStarters" target="_blank">https://github.com/jgujerry/PythonWebStarters</a>.
+    <a href="https://github.com/jgujerry/python-web-templates" target="_blank">https://github.com/jgujerry/python-web-templates</a>.
     Happy coding!
 </p>
 
