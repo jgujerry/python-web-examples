@@ -1,12 +1,15 @@
 from flask import Flask
 
+from landing.routes import bp as landing_bp
 
-def create_app(config=None, testing=False):
+
+def create_app():
     """Create a Flask app"""
     flask_app = Flask(__name__)
-    flask_app.secret_key = config.get("FLASK_APP_SECRET_KEY")
 
     with flask_app.app_context():
-        flask_app.config.from_object(config)
+        flask_app.config.from_object("config.DevelopmentConfig")
+        
+    flask_app.register_blueprint(landing_bp)
 
     return flask_app

@@ -7,11 +7,9 @@ ENV DEBIAN_FRONTED=noniteractive
 ENV PYTHONDONTWRITEBYTECODE=TRUE
 ENV PYTHONUNBUFFERED=TRUE
 
-# Add user that will be used in the container.
-RUN useradd appuser
 
 # Port used by this container to serve HTTP.
-EXPOSE 8000
+EXPOSE 5000
 
 # Install system packages
 RUN apt-get update --yes --quiet && \
@@ -23,8 +21,6 @@ RUN apt-get update --yes --quiet && \
 
 # Use /src folder as a directory where the source code is stored.
 WORKDIR /src
-RUN chown appuser:appuser /src
-
 
 # Install the application server.
 RUN pip install --upgrade pip
@@ -33,12 +29,6 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt /src/requirements.txt
 RUN pip install -r /src/requirements.txt
 
-# Static files & Set this directory to be owned by the "appuser" user.
-RUN mkdir -p /var/www/html
-RUN chown appuser:appuser /var/www/html
-
 # Copy the source code of the project into the container.
-COPY --chown=appuser:appuser . .
-
-# Use user "appuser" to run the build commands below and the server itself.
-USER appuser
+COPY . .
+RUN chmod +x /src/entrypoint.sh

@@ -28,6 +28,7 @@ services:
       - APP_SETTINGS=config.DevelopmentConfig
       - DATABASE_URL=postgresql+psycopg2://flask_db_dev
       - SECRET_KEY=abc123456
+    command: "./src/entrypoint.sh"
     depends_on:
       - db
     links:
