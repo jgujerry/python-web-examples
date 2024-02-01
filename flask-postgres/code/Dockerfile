@@ -31,4 +31,4 @@ RUN pip install -r /src/requirements.txt
 
 # Copy the source code of the project into the container.
 COPY . .
-RUN chmod +x /src/entrypoint.sh
+RUN chmod +x ./entrypoint.sh

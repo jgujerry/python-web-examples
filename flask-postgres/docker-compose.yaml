@@ -18,7 +18,7 @@ services:
   app:
     container_name: app
     build:
-      context: ./src
+      context: ./code
       dockerfile: Dockerfile
     volumes:
       - .:/src/
@@ -26,9 +26,9 @@ services:
     - 5000:5000
     environment:
       - APP_SETTINGS=config.DevelopmentConfig
-      - DATABASE_URL=postgresql+psycopg2://flask_db_dev
+      - DATABASE_URL=postgresql+psycopg2://db:5432/flask_db_dev
       - SECRET_KEY=abc123456
-    command: "./src/entrypoint.sh"
+    command: "./code/entrypoint.sh"
     depends_on:
       - db
     links:
