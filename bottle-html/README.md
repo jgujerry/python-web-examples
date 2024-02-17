@@ -5,13 +5,14 @@
 
 Create a virtual environment,
 ```bash
-$ python3.12 -m venv .venv
+$ python -m venv .venv
 ```
 
 Install Python packages
 ```bash
 $ pip install -r requirements.txt
 ```
+which contains the `bottle` framework.
 
 
 2. Start the Appliction
