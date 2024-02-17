@@ -1,28 +1,29 @@
-# Python Web Starter Templates
+# Python Web Examples
 
-A collection of starter templates making Python web development easy.
+A collection of Python web examples for starting development easy!
 
 * [bottle-html](bottle-mysql/README.md)
 * [bottle-postgres](bottle-postgres/README.md)
 * [bottle-mysql](bottle-mysql/README.md)
 * [django-postgres](django-postgres/README.md)
 * [django-mysql](django-mysql/README.md)
+* [quart-html](quart-html/README.md)
 
-*More starter templates are coming on the way ...*
+*More Python web examples are coming on the way ...*
 
-Happy coding with Python web templates!
+Happy coding with Python web examples!
 
 
 ## Contribution
 
-Any contribution to create or improve the Python web starter templates are welcome!
+Any contribution to create or improve the Python web examples are welcome!
 
-Starter template naming is in lower case with pattern
+Starter example naming is in lower case with pattern
 ```
-{python-web-framework}-{something-to-highlight}
+{framework}-{highlight}
 ```
-
 Please see naming patterns above as examples.
+
 
 ## Contact
 
