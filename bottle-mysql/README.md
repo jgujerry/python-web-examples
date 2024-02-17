@@ -1,5 +1,5 @@
 # bottle-mysql
-A starter template for project using Bottle/MySQL database.
+A starter example for project using Bottle/MySQL database.
 
 *Stack Information*
 
@@ -7,7 +7,7 @@ A starter template for project using Bottle/MySQL database.
 * *MySQL latest*
 
 
-The prerequisites of this starter template,
+The prerequisites of this starter example,
 
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/)

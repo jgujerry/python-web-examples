@@ -1,5 +1,5 @@
 # bottle-postgres
-A starter template for project using Bottle/Postgres
+A starter example for project using Bottle/Postgres
 
 *Stack Information*
 
@@ -7,7 +7,7 @@ A starter template for project using Bottle/Postgres
 * *postgres latest*
 
 
-The prerequisites of using the starter template are the following:
+The prerequisites of using the starter example are the following:
 
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
@@ -15,7 +15,7 @@ The prerequisites of using the starter template are the following:
 
 ## Local dev environment
 
-Get this starter template,
+Get this starter example,
 ```bash
 $ cd bottle-postgres
 ```

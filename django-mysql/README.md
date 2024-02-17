@@ -1,6 +1,6 @@
 # django-mysql
 
-A starter template for project using Django/MySQL
+A starter example for project using Django/MySQL
 
 
 *Stack Information*
@@ -9,7 +9,7 @@ A starter template for project using Django/MySQL
 * *mysql latest*
 
 
-The rrerequisites of using this starter template:
+The rrerequisites of using this starter example:
 
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/)

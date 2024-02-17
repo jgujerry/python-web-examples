@@ -1,6 +1,6 @@
 # django-postgres
 
-This is a starter template for project using Django Postgres stack!
+This is a starter example for project using Django Postgres stack!
 
 *Stack Information*
 
@@ -8,7 +8,7 @@ This is a starter template for project using Django Postgres stack!
 * *postgresql latest*
 
 
-The prerequisites of using this starter template are:
+The prerequisites of using this starter example are:
 
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
