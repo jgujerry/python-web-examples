@@ -1,44 +1,43 @@
 version: '3.9'
 
 services:
-  db:
-    container_name: db
-    build:
-      context: ./postgres
-      dockerfile: Dockerfile
+  postgres:
+    image: postgres:latest
+    container_name: postgres
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
-      - 5432:5432
+      - 5434:5432
     volumes:
       - flask_pgdata:/var/lib/postgresql/data
+      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
     networks:
       - backend
 
-  app:
-    container_name: app
+  web:
+    container_name: web
     build:
-      context: ./code
+      context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/src/
+      - .:/web
     ports:
     - 5000:5000
     environment:
-      - APP_SETTINGS=config.DevelopmentConfig
-      - DATABASE_URL=postgresql+psycopg2://db:5432/flask_db_dev
+      - ENVIRONMENT=development
+      - DATABASE_URL=postgresql+psycopg2://postgres:5432/flask_dev
       - SECRET_KEY=abc123456
-    command: "./code/entrypoint.sh"
+      - PGUSER=postgres
+      # - FLASK_APP=/web/run:app
+    command: "./entrypoint.sh"
     depends_on:
-      - db
-    links:
-      - db
+      - postgres
     networks:
       - backend
-
-volumes:
-  flask_pgdata:
 
 networks:
   backend:
     driver: bridge
+
+volumes:
+  flask_pgdata:

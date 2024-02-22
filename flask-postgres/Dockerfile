@@ -19,15 +19,15 @@ RUN apt-get update --yes --quiet && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get autoclean
 
-# Use /src folder as a directory where the source code is stored.
-WORKDIR /src
+# Use /web folder as a directory where the source code is stored.
+WORKDIR /web
 
 # Install the application server.
 RUN pip install --upgrade pip
 
 # Install the project requirements.
-COPY ./requirements.txt /src/requirements.txt
-RUN pip install -r /src/requirements.txt
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt
 
 # Copy the source code of the project into the container.
 COPY . .
