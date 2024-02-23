@@ -31,4 +31,26 @@ Here are some aspects that require attention, including potential tricks or pitf
 * Set `FLASK_APP` to let Flask-Migrate to find the app.
 * Import models in `__init__.py` file so that Flask-Migrate could detect them.
 
+Get into the container
+```bash
+$ docker compose exec web bash
+```
+
+Use the following commands to migrate your database
+
+Init database (Already inited, you could skip this step)
+```bash
+$ flask db init
+```
+
+Migrate to create versions,
+```bash
+$ flask db migrate
+```
+
+Then upgrade new versions,
+```bash
+$ flask db upgrade
+```
+
 Happy Coding!
