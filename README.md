@@ -8,6 +8,7 @@ A collection of Python web examples for starting development easy!
 * [django-postgres](django-postgres/README.md)
 * [django-mysql](django-mysql/README.md)
 * [flask-postgres](flask-postgres/README.md)
+* [flask-mysql](flask-mysql/README.md)
 * [quart-html](quart-html/README.md)
 
 *More Python web examples are coming on the way ...*
