@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+    volumes:
+      - flask_mysql_data:/var/lib/mysqlql/data
+      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+    networks:
+      - backend
+
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/web
+    ports:
+    - 5000:5000
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=mysql+pymysql://root:root@mysql:3306/flask_dev
+      - SECRET_KEY=secret123
+      - FLASK_APP=/web/run:app
+    command: "./entrypoint.sh"
+    depends_on:
+      - mysql
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  flask_mysql_data:
