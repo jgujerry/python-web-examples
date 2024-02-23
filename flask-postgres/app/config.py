@@ -1,26 +1,28 @@
 import os
 
+__all__ = ["AppConfig"]
 
-class AppConfig:
+
+class ConfigBase:
     """Base configuration"""
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     SECRET_KEY = os.environ.get("SECRET_KEY")
     
 
-class DevelopmentConfig(AppConfig):
+class DevelopmentConfig(ConfigBase):
     """Development configuration"""
     APP_ENV = "development"
     DEBUG = True
 
 
-class TestingConfig(AppConfig):
+class TestingConfig(ConfigBase):
     """Testing configuration"""
     APP_ENV = "testing"
     DEBUG = False
     TESTING = True
 
 
-class ProductionConfig(AppConfig):
+class ProductionConfig(ConfigBase):
     """Production configuration"""
     APP_ENV = "production"
     DEBUG = False
@@ -33,3 +35,7 @@ def get_config(env):
         return TestingConfig
     else:
         return DevelopmentConfig
+
+
+env = os.getenv("FLASK_ENV", "development")
+AppConfig = get_config(env)

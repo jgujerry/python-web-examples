@@ -24,11 +24,11 @@ services:
     ports:
     - 5000:5000
     environment:
-      - ENVIRONMENT=development
+      - FLASK_ENV=development
       - DATABASE_URL=postgresql+psycopg2://postgres:5432/flask_dev
-      - SECRET_KEY=abc123456
+      - SECRET_KEY=secret123
       - PGUSER=postgres
-      # - FLASK_APP=/web/run:app
+      - FLASK_APP=/web/run:app
     command: "./entrypoint.sh"
     depends_on:
       - postgres
