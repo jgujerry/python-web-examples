@@ -11,7 +11,7 @@ class User(db.Model):
     role = db.Column(db.String(), default="viewer")
     
     __table_args__ = (
-        db.CheckConstraint(role.in_(["viewer", "contributor", "manager"]), name="role_types")
+        db.CheckConstraint(role.in_(["viewer", "contributor", "manager"]), name="role_types"),
     )
     
     def __init__(self, username, created_at, role):

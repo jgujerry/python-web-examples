@@ -13,7 +13,7 @@ class House(db.Model):
     owner_id = db.Column(db.Integer, nullable=False)
     
     __table_args__ = (
-        ForeignKeyConstraint([owner_id], [User.id], ondelete="NO ACTION")
+        ForeignKeyConstraint([owner_id], [User.id], ondelete="NO ACTION"),
     )
     
     def __init__(self, address, owner_id):
