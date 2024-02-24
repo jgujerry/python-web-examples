@@ -11,6 +11,7 @@ Examples are listed here:
 * [flask-mysql](flask-mysql/README.md)
 * [quart-api](quart-api/README.md)
 * [quart-html](quart-html/README.md)
+* [quart-chat](quart-chat/README.md)
 
 *More Python web examples are coming on the way ...*
 
