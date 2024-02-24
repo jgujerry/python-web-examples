@@ -18,7 +18,10 @@
 
   <p>Python web example from <a href="https://github.com/jgujerry/python-web-examples" target="_blank">https://github.com/jgujerry/python-web-examples</a></p>
 
-  <img src="{{ url_for('static', filename='img/logo.webp') }}">
+  <img style="width: 200px; height: auto;" src="{{ url_for('static', filename='img/logo.webp') }}">
+
+  {% block content %} {% endblock %}
+
   <!-- Core theme JS-->
   <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
