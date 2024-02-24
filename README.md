@@ -1,6 +1,6 @@
 # Python Web Examples
 
-A collection of Python web examples for starting development easy!
+Examples are listed here:
 
 * [bottle-html](bottle-mysql/README.md)
 * [bottle-postgres](bottle-postgres/README.md)
@@ -9,11 +9,12 @@ A collection of Python web examples for starting development easy!
 * [django-mysql](django-mysql/README.md)
 * [flask-postgres](flask-postgres/README.md)
 * [flask-mysql](flask-mysql/README.md)
+* [quart-api](quart-api/README.md)
 * [quart-html](quart-html/README.md)
 
 *More Python web examples are coming on the way ...*
 
-Happy coding with Python web examples!
+Hope these examples could help you! Happy Coding!
 
 
 ## Contribution
