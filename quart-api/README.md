@@ -34,6 +34,6 @@ Then vist [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
 ## API Docs
 
-Please visit [http://127.0.0.1:8080/docs](http://127.0.0.1:8080/docs)
+Swagger Docs - [http://127.0.0.1:8080/docs](http://127.0.0.1:8080/docs)
 
 Happy Coding!
