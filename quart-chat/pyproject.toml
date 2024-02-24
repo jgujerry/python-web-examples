@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "quart-chat"
+version = "0.1.0"
+description = ""
+authors = ["jgujerry <jgujerry@gmail.com>"]
+readme = "README.md"
+packages = [{include = "quart_chat", from = "chat"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+quart = "^0.19.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

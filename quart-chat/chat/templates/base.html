@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  {% block title %}{% endblock %}
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+  <h1>Quart framework Chatbot (Websocket)</h1>
+
+  <p>Python web example from <a href="https://github.com/jgujerry/python-web-examples" target="_blank">https://github.com/jgujerry/python-web-examples</a></p>
+
+  <img style="width: 100px; height: auto;" src="{{ url_for('static', filename='img/logo.webp') }}">
+
+  {% block content%} {% endblock %}
+
+  <!-- Core theme JS-->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

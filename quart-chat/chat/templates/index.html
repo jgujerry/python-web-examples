@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Home</title>{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div style="display: flex; height: 100%; flex-direction: column">
+    <ul id="messages" style="flex-grow: 1; list-style-type: none"></ul>
+  
+    <form onsubmit="return send(event)">
+      <input type="text" name="message" minlength="1" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
