@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "quart-api"
+version = "0.1.0"
+description = ""
+authors = ["jgujerry <test@example.com>"]
+readme = "README.md"
+packages = [{include = "app", from = "."}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+quart = "^0.19.4"
+quart-schema = "^0.19.1"
+pydantic = "^2.6.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
