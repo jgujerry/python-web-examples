@@ -21,7 +21,7 @@ async def _receive() -> None:
 @blueprint.websocket("/ws")
 async def ws() -> None:
     try:
-        task = asyncio.ensure_future(_receive())
+        task = asyncio.create_task(_receive())
         async for message in broker.subscribe():
             await websocket.send(message)
     finally:
