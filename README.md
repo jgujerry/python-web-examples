@@ -1,6 +1,6 @@
 # Python Web Examples
 
-Examples are listed here:
+Examples with a verity of Python frameworks are listed here:
 
 * [bottle-html](bottle-mysql/README.md)
 * [bottle-postgres](bottle-postgres/README.md)
