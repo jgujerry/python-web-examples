@@ -7,14 +7,12 @@ from fastapi.responses import RedirectResponse
 from src.config.settings import settings
 from src.routes import router
 
-
 __version__ = "0.0.1"
 
 
 @asynccontextmanager
 async def lifesapn(app: FastAPI):
     """fASTAPI application lifespan"""
-    print("Initializing...")
     yield
 
 
