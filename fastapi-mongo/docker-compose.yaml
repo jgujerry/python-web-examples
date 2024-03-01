@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - .mongodb:/data/db
+    networks:
+      - backend
+  
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fastapi-mongo
+    container_name: web
+    restart: on-failure
+    env_file:
+      - .env.example
+    volumes:
+      - .:/src
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    command: ["/wait-for-mongo.sh", "/entrypoint.sh"]
+    networks:
+      - backend
+
+
+networks:
+  backend:
