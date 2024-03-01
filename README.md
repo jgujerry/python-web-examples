@@ -7,6 +7,7 @@ Examples with a verity of Python frameworks are listed here:
 * [bottle-mysql](bottle-mysql/README.md)
 * [django-postgres](django-postgres/README.md)
 * [django-mysql](django-mysql/README.md)
+* [fastapi-api](fastapi-api/README.md)
 * [flask-postgres](flask-postgres/README.md)
 * [flask-mysql](flask-mysql/README.md)
 * [quart-api](quart-api/README.md)
