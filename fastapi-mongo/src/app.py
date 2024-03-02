@@ -7,7 +7,7 @@ from fastapi.responses import RedirectResponse
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from src.config.settings import settings
-from src.models import User
+from src.models import UserDocument, GroupDocument
 from src.routes import router
 
 __version__ = "0.0.1"
@@ -22,7 +22,8 @@ async def lifesapn(app: FastAPI):
     await init_beanie(
         database=motor_client[settings.MONGO_DB],
         document_models=[
-            User
+            GroupDocument,
+            UserDocument
         ]
     )
     yield
