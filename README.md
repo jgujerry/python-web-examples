@@ -8,6 +8,7 @@ Examples with a verity of Python frameworks are listed here:
 * [django-postgres](django-postgres/README.md)
 * [django-mysql](django-mysql/README.md)
 * [fastapi-api](fastapi-api/README.md)
+* [fastapi-mongo](fastapi-mongo/README.md)
 * [flask-postgres](flask-postgres/README.md)
 * [flask-mysql](flask-mysql/README.md)
 * [quart-api](quart-api/README.md)
