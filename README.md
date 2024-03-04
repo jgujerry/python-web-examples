@@ -17,7 +17,7 @@ Examples with a verity of Python frameworks are listed here:
 
 *More Python web examples are coming on the way ...*
 
-Hope these examples could help you! Happy Coding!
+Hope these examples can get you inspired and started Python web development easier! Happy Coding!
 
 
 ## Contribution
