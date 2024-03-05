@@ -26,7 +26,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: celery-worker
+    image: django-celery
     container_name: worker
     restart: on-failure
     environment:
@@ -46,11 +46,38 @@ services:
     networks:
       - backend
 
+  flower:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: django-celery
+    container_name: flower
+    restart: on-failure
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=
+      - DJANGO_SECRET_KEY="django-insecure-k#s1dm=wuTrAprit&avu_tOhO!rubrldrapruqAkapedrln!2e"
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    volumes:
+      - .:/web
+    ports:
+      - "5000:5000"
+    command: "./startflower.sh"
+    depends_on:
+      - redis
+      - worker
+    networks:
+      - backend
+
   app:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: django-app
+    image: django-celery
     container_name: app
     restart: on-failure
     environment:
@@ -71,6 +98,7 @@ services:
       - postgres
       - redis
       - worker
+      - flower
     networks:
       - backend
 

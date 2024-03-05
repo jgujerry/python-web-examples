@@ -40,6 +40,13 @@ Up dev environment,
 $ docker compose up
 ```
 
-Visit [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/)
+Visit [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) for app development.
 
 
+## Celery worker & Flower
+
+Celery worker broker is using Redis.
+
+Use Celery flower to monitor the worker, queue and job status.
+
+Flower [`http://127.0.0.1:5000/`](http://127.0.0.1:5000/).

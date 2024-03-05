@@ -1,4 +1,5 @@
 celery[redis]
 django
 django-environ
+flower
 psycopg

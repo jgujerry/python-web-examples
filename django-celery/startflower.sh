@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-celery -A app flower --port 5000
+celery --app config flower --port=5000
 
