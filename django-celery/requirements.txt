@@ -1,1 +1,4 @@
+celery[redis]
 django
+django-environ
+psycopg
