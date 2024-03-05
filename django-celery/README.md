@@ -50,3 +50,30 @@ Celery worker broker is using Redis.
 Use Celery flower to monitor the worker, queue and job status.
 
 Flower [`http://127.0.0.1:5000/`](http://127.0.0.1:5000/).
+
+
+## Create superuser
+
+Enter the `app` container,
+
+```bash
+$ docker-compose exec app bash
+```
+
+After entered into the container, then create a superuser for local development.
+
+```bash
+$ python manage.py createsuperuser
+```
+
+Then use the credentials to login to the admin page,
+
+Admin [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+
+## Celery results extension
+
+Django celery results extension has been installed, and has db migration, you can check the tables on Admin panel.
+
+* https://github.com/celery/django-celery-results
+* https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html
