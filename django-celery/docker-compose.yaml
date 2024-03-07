@@ -11,16 +11,12 @@ services:
       - "5432:5432"
     volumes:
       - django_pgdata:/var/lib/postgresql/data
-    networks:
-      - backend
 
   redis:
     image: "redis:latest"
     container_name: redis
     ports:
       - "6379:6379"
-    networks:
-      - backend
   
   worker:
     build:
@@ -37,14 +33,11 @@ services:
       - POSTGRES_PASSWORD=
       - DJANGO_SECRET_KEY="django-insecure-k#s1dm=wuTrAprit&avu_tOhO!rubrldrapruqAkapedrln!2e"
       - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
     volumes:
       - .:/web
     command: "./startworker.sh"
     depends_on:
       - redis
-    networks:
-      - backend
 
   flower:
     build:
@@ -61,7 +54,6 @@ services:
       - POSTGRES_PASSWORD=
       - DJANGO_SECRET_KEY="django-insecure-k#s1dm=wuTrAprit&avu_tOhO!rubrldrapruqAkapedrln!2e"
       - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
     volumes:
       - .:/web
     ports:
@@ -70,8 +62,6 @@ services:
     depends_on:
       - redis
       - worker
-    networks:
-      - backend
 
   app:
     build:
@@ -88,7 +78,6 @@ services:
       - POSTGRES_PASSWORD=
       - DJANGO_SECRET_KEY="django-insecure-k#s1dm=wuTrAprit&avu_tOhO!rubrldrapruqAkapedrln!2e"
       - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
     volumes:
       - .:/web
     ports:
@@ -99,11 +88,7 @@ services:
       - redis
       - worker
       - flower
-    networks:
-      - backend
 
-networks:
-  backend:
 
 volumes:
   django_pgdata:
