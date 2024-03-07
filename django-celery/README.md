@@ -77,3 +77,5 @@ Django celery results extension has been installed, and has db migration, you ca
 
 * https://github.com/celery/django-celery-results
 * https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html
+
+Celery result: [127.0.0.1:8000/admin/django_celery_results/taskresult/](127.0.0.1:8000/admin/django_celery_results/taskresult/).
