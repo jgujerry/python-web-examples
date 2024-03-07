@@ -1,7 +1,9 @@
+import json
 import time
 
 from django.http.response import JsonResponse
 from django.shortcuts import render
+from django_celery_results.models import TaskResult
 
 from app.tasks import run_modeling_job
 
@@ -20,7 +22,7 @@ def sync_run_modeling_job(request):
     # Return response
     data = {
         'result': result,
-        'elasped_time': round(elapsed_time, 3)
+        'elapsed_time': round(elapsed_time, 3)
     }
     return JsonResponse(data)
 
@@ -35,7 +37,27 @@ def async_run_modeling_job(request):
     # Return response
     data = {
         'result': async_result.id,
-        'elasped_time': elapsed_time
+        'elapsed_time': elapsed_time
     }
 
+    return JsonResponse(data)
+
+
+def show_async_job_result(request):
+    """Show async job result"""
+    task_id = request.GET.get('task_id', None)
+    try:
+        task = TaskResult.objects.get(task_id=task_id)
+    except TaskResult.DoesNotExist:
+        task = None
+    
+    if not task:
+        return JsonResponse({})
+    
+    result_data = json.loads(task.result)
+    data = {
+        "result": result_data[0],
+        "elapsed_time": result_data[1]
+    }
+    
     return JsonResponse(data)

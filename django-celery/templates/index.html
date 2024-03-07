@@ -10,14 +10,15 @@
 
 <h1>Long Task without Celery</h1>
 <p>Result: <span id="r2"></span></p>
-<p>Elasped Time: <span id="t2">0</span>s</p>
+<p>elapsed Time: <span id="t2">0</span>s</p>
 <input type="button" value="Long Run" onclick="sync_run_modeling_job()">
 <hr>
 
 <h1>Long Task with Celery</h1>
 <p>Result: <span id="r3"></span></p>
-<p>Elasped Time: <span id="t3">0</span>s</p>
+<p>elapsed Time: <span id="t3">0</span>s</p>
 <input type="button" value="Asynchronous Long Run" onclick="async_run_modeling_job()">
+<button id="show-result" onclick="show_async_job_result()">Show Result</button>
 <hr>
 
 <script>
@@ -27,7 +28,7 @@
         let url = '/sync-run-modeling-job/';
         fetch(url).then(response => response.json()).then(data => {
             document.getElementById('r2').innerText = data['result'];
-            document.getElementById('t2').innerText = data['elasped_time'];
+            document.getElementById('t2').innerText = data['elapsed_time'];
             document.getElementById('s').style.display = 'none';
         });
     }
@@ -38,9 +39,25 @@
         let url = '/async-run-modeling-job/';
         fetch(url).then(response => response.json()).then(data => {
             document.getElementById('r3').innerText = data['result'];
-            document.getElementById('t3').innerText = data['elasped_time'];
+            document.getElementById('t3').innerText = data['elapsed_time'];
             document.getElementById('s').style.display = 'none';
         });
+    }
+
+    function show_async_job_result() {
+        let task_id = document.getElementById('r3').innerText;
+        if (task_id != null) {
+            let url = '/show-async-job-result/?';
+            let params = new URLSearchParams({
+                "task_id": task_id
+            })
+            fetch(url + params).then(response => response.json()).then(data => {
+                if (data["result"] != null) {
+                    document.getElementById('r3').innerText = data['result'];
+                    document.getElementById('t3').innerText = data['elapsed_time'];
+                }
+            });
+        }
     }
 </script>
 {% endblock %}
