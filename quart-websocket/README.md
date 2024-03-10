@@ -1,6 +1,6 @@
-# quart-chat
+# quart-websocket
 
-A chatbot built with Quart using websocket.
+A chat app built with Quart using websocket.
 
 ## Development Environment
 
