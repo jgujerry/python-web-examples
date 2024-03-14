@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "streamlit-llm-chat"
+name = "streamlit-app"
 version = "0.1.0"
 description = ""
-authors = ["jgujerry <jianligu3@gmail.com>"]
+authors = ["jgujerry <jgu@example.com>"]
 readme = "README.md"
-packages = [{include = "streamlit_llm_chat", from = "src"}]
+packages = [{include = "streamlit_app", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 streamlit = "^1.31.1"
+matplotlib = "^3.8.3"
 
 
 [build-system]
