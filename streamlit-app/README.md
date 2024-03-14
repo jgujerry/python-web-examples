@@ -1,11 +1,11 @@
-# streamlit-llm-chat
+# streamlit-app
 
 ## Development environment
 
 Enter into the project directory
 
 ```cd
-$ cd stremlit-llm-chat
+$ cd stremlit-app
 ```
 
 Create a Python virtual environment,
@@ -33,7 +33,7 @@ $ poetry install
 Run the example with Streamlit
 
 ```bash
-$ streamlit run src/streamlit-llm-chat/main.py
+$ streamlit run src/streamlit-app/main.py
 ``
 
 Then visit `[http://127.0.0.1:8501](http://127.0.0.1:8501).
