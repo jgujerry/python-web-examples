@@ -12,6 +12,7 @@ Examples with a verity of Python frameworks are listed here:
 * [fastapi-mongo](fastapi-mongo/README.md)
 * [flask-postgres](flask-postgres/README.md)
 * [flask-mysql](flask-mysql/README.md)
+* [pyramid-html](pyramid-html/README.md)
 * [quart-api](quart-api/README.md)
 * [quart-html](quart-html/README.md)
 * [quart-websocket](quart-websocket/README.md)
