@@ -1,0 +1,9 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+<div class="content">
+  <h1>About this Starter project</span></h1>
+  <p class="lead">This is the {{message}} of this example project.</p>
+  <p>Go back to <a href="{{ request.route_url('home') }}">Home</a></p>
+</div>
+{% endblock content %}
