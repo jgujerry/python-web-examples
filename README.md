@@ -27,7 +27,7 @@ Happy Coding!
 
 ## Contribution
 
-Any contribution to create or improve the Python web examples are welcome!
+Any contribution to create or improve the Python web examples is welcome!
 
 Starter example naming is in lower case with pattern
 ```
