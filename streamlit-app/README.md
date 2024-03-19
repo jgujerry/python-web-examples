@@ -34,6 +34,6 @@ Run the example with Streamlit
 
 ```bash
 $ streamlit run src/streamlit-app/main.py
-``
+```
 
 Then visit `[http://127.0.0.1:8501](http://127.0.0.1:8501).
