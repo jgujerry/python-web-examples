@@ -17,6 +17,7 @@ Examples with a verity of Python frameworks are listed here:
 * [quart-html](quart-html/README.md)
 * [quart-websocket](quart-websocket/README.md)
 * [streamlit-app](streamlit-app/README.md)
+* [streamlit-openai](streamlit-openai/README.md)
 
 *More Python web examples are coming on the way ...*
 
