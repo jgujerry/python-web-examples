@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "streamlit-openai"
+version = "0.1.0"
+description = ""
+authors = ["jgujerry jgujerry@example.com>"]
+readme = "README.md"
+packages = [{include = "streamlit_openai", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.14.1"
+streamlit = "^1.32.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
