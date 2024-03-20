@@ -29,6 +29,13 @@ Install Python packages
 $ poetry install
 ```
 
+## Setup OpenAI API Key
+
+Open the secrets file of Streamlit on your machine, e.g. `~/.streamlit/secrets.toml`, and put the OpenAI API key there.
+```bash
+openai_api_key = sk-xxxxxx
+```
+
 
 ## Run Streamlit OpanAI app
 
