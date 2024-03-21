@@ -162,3 +162,5 @@ cython_debug/
 
 # Volumes
 .mongodb/
+
+node_modules/
