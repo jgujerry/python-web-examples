@@ -48,6 +48,12 @@ $ npx tailwindcss init
 This would create `tailwind.config.js`.
 
 
+Run the following command to distribute Tailwind CSS,
+```bash
+$ npx tailwindcss -i ./static/css/styles.css -o ./static/dist/styles.css --watch
+```
+
+
 ## Run Django Development Server
 
 Run the following command to start the development server,

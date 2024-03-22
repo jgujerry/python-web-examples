@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: [],
+  content: ["./myapp/templates/**/*.html"],
   theme: {
     extend: {},
   },
