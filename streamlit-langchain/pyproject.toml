@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "streamlit-langchain"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.32.2"
+langchain = "^0.1.13"
+openai = "^1.14.3"
+langchain-community = "^0.0.29"
+langchain-openai = "^0.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
