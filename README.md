@@ -33,20 +33,19 @@ Pyramid
 
 
 Quart
-* [quart-api](quart-api/README.md)
 * [quart-html](quart-html/README.md)
+* [quart-api](quart-api/README.md)
 * [quart-websocket](quart-websocket/README.md)
 
 
 Streamlit
 * [streamlit-app](streamlit-app/README.md)
 * [streamlit-openai](streamlit-openai/README.md)
-
-*More Python web examples are coming on the way ...*
+* [streamlit-langchain](streamlit-langchain/README.md)
 
 Hope these examples can get you inspired and started with Python web development easier!
 
-Happy Coding!
+*More Python web examples are coming on the way ... Happy coding!*
 
 
 ## Contribution
