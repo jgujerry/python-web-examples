@@ -45,17 +45,21 @@ Streamlit
 
 Hope these examples can get you inspired and started with Python web development easier!
 
-*More Python web examples are coming on the way ... Happy coding!*
+*More Python web examples are coming on the way ...*
+
+Happy coding!
 
 
 ## Contribution
 
 Any contribution to create or improve the Python web examples is welcome!
 
-Starter example naming is in lower case with pattern
+All examples are named in lower case with pattern like this:
+
 ```
 {framework}-{highlight}
 ```
+
 Please see naming patterns above as examples.
 
 
@@ -66,4 +70,4 @@ If you have any question about this opinionated list, do not hesitate to contact
 
 ## License
 
-This project is released under [MIT License](LICENSE)
+[MIT](LICENSE)
