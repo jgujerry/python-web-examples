@@ -1,4 +1,4 @@
-# Bottle App with HTML
+# bottle-app
 
 1. Setup Python Environment
 

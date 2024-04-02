@@ -5,7 +5,7 @@ Examples with a verity of Python frameworks are listed here:
 
 Bottle
 
-* [bottle-html](bottle-mysql/README.md)
+* [bottle-app](bottle-mysql/README.md)
 * [bottle-postgres](bottle-postgres/README.md)
 * [bottle-mysql](bottle-mysql/README.md)
 
