@@ -33,7 +33,7 @@ Pyramid
 
 
 Quart
-* [quart-html](quart-html/README.md)
+* [quart-app](quart-app/README.md)
 * [quart-api](quart-api/README.md)
 * [quart-websocket](quart-websocket/README.md)
 

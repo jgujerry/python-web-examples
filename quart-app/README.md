@@ -1,4 +1,4 @@
-# Quart Html
+# quart-app
 
 
 ## Dev Environment
@@ -9,7 +9,7 @@ If you are not familiar with `poetry` yet, please refer to this tutorial
 
 Get into the project directory,
 ```bash
-$ cd quart-html
+$ cd quart-app
 ```
 
 Create Python virtual environment,
