@@ -34,7 +34,7 @@ $ poetry shell
 Start the CherryPy server:
 
 ```bash
-$ cherryd -
+$ ./entrypoint.sh
 ```
 
-Open your web browser and visit http://localhost:8080 to see the app in action.
+Open your web browser and visit http://127.0.0.1:8080 to see the app in action.
