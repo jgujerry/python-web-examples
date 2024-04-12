@@ -1,12 +1,14 @@
 import cherrypy
 
-from src.cherrypy_bootstrap import config
-from src.cherrypy_bootstrap.application import controllers
+from cherrypy_bootstrap.config import development
+from cherrypy_bootstrap.myapp import controllers
 
 
 if __name__ == "__main__":
     cherrypy.tree.mount(
         controllers.CherryApp(),
         "/",
-        config=config.app_config
+        config=development.config
     )
+    cherrypy.engine.start()
+    cherrypy.engine.block()

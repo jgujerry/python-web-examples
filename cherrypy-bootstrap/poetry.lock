@@ -68,6 +68,21 @@ testing = ["codecov", "coverage", "objgraph", "path.py", "pytest (>=5.3.5)", "py
 xcgi = ["flup"]
 
 [[package]]
+name = "cherrypy-jinja2"
+version = "2.2"
+description = "CherryPy tool to render output through Jinja2 templates"
+optional = false
+python-versions = "*"
+files = [
+    {file = "cherrypy-jinja2-2.2.tar.gz", hash = "sha256:333ca4170bdc094d0dc93a58ea61770bae9bcafbfd8db82bb36f32e1defc6b0b"},
+    {file = "cherrypy_jinja2-2.2-py3-none-any.whl", hash = "sha256:8adf8a189a39eed39a3e5a6fabdf512500971e370733e3ac90e377586ba51285"},
+]
+
+[package.dependencies]
+CherryPy = "*"
+Jinja2 = "*"
+
+[[package]]
 name = "inflect"
 version = "7.0.0"
 description = "Correctly generate plurals, singular nouns, ordinals, indefinite articles; convert numbers to words"
@@ -461,4 +476,4 @@ test = ["zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "7ff8a4958ff5d4aafc6faf32db1fab10872b4f3a8b6ae1959eead49a872b32c6"
+content-hash = "20720dba7061a36246be929778a16ce1414b0d8cbdf853fd4e91465dfa0eb936"

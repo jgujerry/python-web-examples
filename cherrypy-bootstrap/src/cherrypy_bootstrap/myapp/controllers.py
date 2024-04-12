@@ -1,6 +1,6 @@
 import cherrypy
 
-from src.cherrypy_bootstrap.utilities import render
+from cherrypy_bootstrap.utilities import render
 
 
 class CherryApp(object):
