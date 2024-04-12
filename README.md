@@ -9,6 +9,10 @@ Bottle
 * [bottle-postgres](bottle-postgres/README.md)
 * [bottle-mysql](bottle-mysql/README.md)
 
+CherryPy
+
+* [cherrypy-bootstrap](cherrypy-bootstrap/README.md)
+
 
 Django
 
