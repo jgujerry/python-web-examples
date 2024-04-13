@@ -1,4 +1,4 @@
-# pyramid-html
+# pyramid-app
 
 
 ## Introduction
@@ -8,8 +8,8 @@ This project got initialized by using `cookiecutter`.
 ```bash
 $ cookiecutter gh:Pylons/pyramid-cookiecutter-starter 
 
-  [1/4] project_name (Pyramid Scaffold): pyramid-html
-  [2/4] repo_name (pyramid_html): 
+  [1/4] project_name (Pyramid Scaffold): pyramid-app
+  [2/4] repo_name (pyramid_app): 
   [3/4] Select template_language
     1 - jinja2
     2 - chameleon
@@ -30,10 +30,10 @@ Welcome to Pyramid.  Sorry for the convenience.
 ===============================================================================
 
 Change directory into your newly created project.
-    cd pyramid-html
+    cd pyramid-app
 
 Create a Python virtual environment.
-    python3 -m venv env
+    python3 -m venv .venv
 
 Upgrade packaging tools.
     env/bin/pip install --upgrade pip setuptools

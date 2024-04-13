@@ -5,7 +5,7 @@ from pyramid.testing import DummyRequest, testConfig
 import pytest
 import webtest
 
-from pyramid_html import main
+from pyramid_app import main
 
 
 def pytest_addoption(parser):

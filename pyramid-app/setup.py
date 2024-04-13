@@ -23,9 +23,9 @@ tests_require = [
 ]
 
 setup(
-    name='pyramid_html',
+    name='pyramid_app',
     version='0.0',
-    description='pyramid-html',
+    description='pyramid-app',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
         'Programming Language :: Python',
@@ -46,7 +46,7 @@ setup(
     install_requires=requires,
     entry_points={
         'paste.app_factory': [
-            'main = pyramid_html:main',
+            'main = pyramid_app:main',
         ],
     },
 )
