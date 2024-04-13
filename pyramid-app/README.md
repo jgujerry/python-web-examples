@@ -68,4 +68,10 @@ Install required packages into the virtual environment,
 $ python setup.py develop
 ```
 
+
+To start the project at localhost:
+```bash
+$ pserve development.ini --reload
+```
+
 Then visit the site [`http://127.0.0.1:6543/`](http://127.0.0.1:6543/)
