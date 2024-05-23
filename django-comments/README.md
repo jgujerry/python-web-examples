@@ -58,3 +58,14 @@ Migrate the models,
 ```bash
 $ python3 migrate.py migrate
 ```
+
+## Add Article via Django Admin
+
+Go to the admin page [`http://127.0.0.1:8000/admin`](http://127.0.0.1:8000/admin), and add an article there.
+
+
+## Add Comments to the article
+
+Open the home page [`http://127.0.0.1:8000`](http://127.0.0.1:8000), and you can add comments to the article.
+
+![Screenshot](./article-comments.png)
