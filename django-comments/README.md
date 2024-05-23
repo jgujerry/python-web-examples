@@ -33,3 +33,28 @@ $ python manage.py runserver
 ```
 
 Then visit [`http://127.0.0.1:8000`](http://127.0.0.1:8000)
+
+
+## Create a Superuser
+
+```bash
+$ python manage.py createsuperuser
+```
+
+Then you can manage the data via Django admin panel - [`http://127.0.0.1:8000/admin`](http://127.0.0.1:8000/admin)
+
+
+
+## Run Django Migration
+
+Make the migration files,
+
+```bash
+$ python3 manage.py makemigrations
+```
+
+Migrate the models,
+
+```bash
+$ python3 migrate.py migrate
+```

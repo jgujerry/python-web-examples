@@ -5,7 +5,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import ButtonHolder, Column, Layout, Row, Submit
 from tinymce.widgets import TinyMCE
 
-from comments import Comment
+from comments.models import Comment
 
 
 CUSTOM_MCE_ATTRS = {
@@ -23,7 +23,7 @@ CUSTOM_MCE_ATTRS = {
 
 
 class CommentForm(forms.ModelForm):
-    content = forms.CharField(label='New Comment', widget=TinyMCE(mce_attrs=CUSTOM_MCE_ATTRS))
+    content = forms.CharField(label='Comment', widget=TinyMCE(mce_attrs=CUSTOM_MCE_ATTRS))
     
     class Meta:
         model = Comment

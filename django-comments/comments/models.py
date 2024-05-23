@@ -21,4 +21,5 @@ class Comment(models.Model):
     class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
-        ordering = ('createion_date')
+        ordering = ('creation_date',)
+        db_table = 'comments'
