@@ -20,6 +20,7 @@ Django
 * [django-mysql](django-mysql/README.md)
 * [django-celery](django-celery/README.md)
 * [django-tailwind](django-tailwind/README.md)
+* [django-comments](django-comments/README.md)
 
 
 FastAPI
