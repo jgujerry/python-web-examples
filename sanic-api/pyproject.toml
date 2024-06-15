@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sanic-api"
+version = "0.1.0"
+description = "A sanic api example project"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sanic = "^23.12.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
