@@ -1,6 +1,10 @@
 from sanic import Sanic
 import os
 
+from .config import get_config
+from .routes import setup_routes
+
+
 def create_app():
     app = Sanic(__name__)
 
