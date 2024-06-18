@@ -1,27 +1,14 @@
 from sanic import Sanic
-import os
 
 from .config import get_config
 from .routes import setup_routes
 
 
-def create_app():
+def create_app(env):
     app = Sanic(__name__)
+    config = get_config(env)
+    app.config.from_object(config)
 
-    # Determine which configuration to use
-    env = os.getenv('SANIC_ENV', 'development')
-
-    if env == 'production':
-        from app.config.production import ProductionConfig
-        app.config.from_object(ProductionConfig)
-    else:
-        from app.config.development import DevelopmentConfig
-        app.config.from_object(DevelopmentConfig)
-
-    from app.routes import init_routes
-    from app.utils.db import init_db
-
-    init_db(app)
-    init_routes(app)
+    setup_routes(app)
 
     return app

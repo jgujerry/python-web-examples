@@ -1,4 +1,5 @@
-from .base.py import BaseConfig
+from .base import BaseConfig
+
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True

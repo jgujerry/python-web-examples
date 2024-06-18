@@ -1,4 +1,5 @@
-from .base.py import BaseConfig
+from .base import BaseConfig
+
 
 class ProductionConfig(BaseConfig):
     DATABASE_URI = 'postgresql://user:password@localhost/prod_db'

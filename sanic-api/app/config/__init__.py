@@ -1,12 +1,9 @@
-import os
+from .development import DevelopmentConfig
+from .production import ProductionConfig
 
-def get_config(config_name):
-    if config_name == 'development':
-        from .development import DevelopmentConfig
-        return DevelopmentConfig
-    elif config_name == 'production':
-        from .production import ProductionConfig
+
+def get_config(env):
+    if env == 'production':
         return ProductionConfig
     else:
-        from .base import BaseConfig
-        return BaseConfig
+        return DevelopmentConfig
