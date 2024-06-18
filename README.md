@@ -9,6 +9,7 @@ Bottle
 * [bottle-postgres](bottle-postgres/README.md)
 * [bottle-mysql](bottle-mysql/README.md)
 
+
 CherryPy
 
 * [cherrypy-bootstrap](cherrypy-bootstrap/README.md)
@@ -43,10 +44,15 @@ Quart
 * [quart-websocket](quart-websocket/README.md)
 
 
+Sanic
+* [sanic-api](sanic-api/README.md)
+
+
 Streamlit
 * [streamlit-app](streamlit-app/README.md)
 * [streamlit-openai](streamlit-openai/README.md)
 * [streamlit-langchain](streamlit-langchain/README.md)
+
 
 Hope these examples can get you inspired and started with Python web development easier!
 

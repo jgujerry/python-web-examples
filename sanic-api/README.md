@@ -30,10 +30,6 @@ Run the applicaton,
 $ python run.py
 ```
 
-Then vist [http://127.0.0.1:8080](http://127.0.0.1:8080).
-
-## API Docs
-
-Swagger Docs - [http://127.0.0.1:8080/docs](http://127.0.0.1:8080/docs)
+Then vist [http://127.0.0.1:5000](http://127.0.0.1:5000).
 
 Happy Coding!
