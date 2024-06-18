@@ -7,7 +7,7 @@ from .routes import setup_routes
 def create_app(env):
     app = Sanic(__name__)
     config = get_config(env)
-    app.config.from_object(config)
+    app.update_config(config)
 
     setup_routes(app)
 
