@@ -1,3 +1,5 @@
+# https://sanic.dev/en/guide/running/configuration.html
+
 class BaseConfig:
     DEBUG = False
     TESTING = False
