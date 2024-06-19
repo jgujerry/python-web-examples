@@ -30,6 +30,9 @@ Run the applicaton,
 $ python run.py
 ```
 
-Then vist [http://127.0.0.1:5000](http://127.0.0.1:5000).
+Then visit [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+
+The API docs visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 
 Happy Coding!
