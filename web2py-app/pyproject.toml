@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "web2py-app"
+version = "0.1.0"
+description = "Example app built on top of Web2Py"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+globals = "^0.3.36"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
