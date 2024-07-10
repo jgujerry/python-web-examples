@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-globals = "^0.3.36"
+web2py = { git = "https://github.com/web2py/web2py.git", tag = "v2.27.1" }
 
 
 [build-system]
