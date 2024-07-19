@@ -15,10 +15,6 @@ then activate it,
 $ source .venv/bin/activate
 ```
 
-
-## Create a Web2Py project
-
-
 Clone Web2Py from its GitHub repo,
 
 ```bash
