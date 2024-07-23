@@ -40,3 +40,36 @@ $ python web2py.py
 ```
 
 It'll require you to setup a password. After that, you can visit [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+
+## Create a new project
+
+Create a new project named `app` via the Web2Py UI, you can find it under `web2py/applications/app`.
+
+Web2Py project has the following structure or layout,
+
+```bash
+app
+├── ABOUT
+├── controllers
+├── cron
+├── databases
+├── errors
+├── __init__.py
+├── languages
+├── LICENSE
+├── models
+├── modules
+├── private
+├── progress.log
+├── routes.example.py
+├── sessions
+├── static
+├── uploads
+└── views
+
+12 directories, 5 files
+```
+
+Then you can either develop the project using Web2Py web UI or maybe VSCode.
+
