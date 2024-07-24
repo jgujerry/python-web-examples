@@ -73,3 +73,8 @@ app
 
 Then you can either develop the project using Web2Py web UI or maybe VSCode.
 
+
+## Develop our own project
+
+Based on the project template created above, now we can customize and develop own project.
+
