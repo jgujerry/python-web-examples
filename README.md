@@ -71,7 +71,7 @@ All examples are named in lower case with pattern like this:
 {framework}-{highlight}
 ```
 
-Please see naming patterns above as examples.
+Please see naming patterns above as examples, you can name yours in contribution.
 
 
 ## Contact
