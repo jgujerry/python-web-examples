@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<main>
+    <p>Diagram with Reactflow</p>
+    
+    <!-- ReactFlow app container -->
+    <div id="reactflow-app" style="width: 100%; height: 600px; border: 1px solid #ccc;"></div>
+    
+    <!-- Embed Django data as JSON -->
+    <script type="application/json" id="diagram-data">
+    {
+        "nodes": {{ nodes_json|safe }},
+        "edges": {{ edges_json|safe }}
+    }
+    </script>
+</main>
+{% endblock main %}
+
+{% block extra_foot %}
+    <!-- Load your compiled bundle (includes React, ReactDOM, and ReactFlow) -->
+    <script src="{% static 'js/bundle.js' %}"></script>
+    
+    <script>
+        // Extract data from the embedded JSON
+        const diagramData = JSON.parse(document.getElementById('diagram-data').textContent);
+        ReactFlowApp.mountApp('reactflow-app', diagramData);
+    </script>
+{% endblock extra_foot %}
