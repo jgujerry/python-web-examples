@@ -3,7 +3,14 @@
 
 ## Setup development environment
 
-1. Python Env
+
+Create a `.env` file in the root directory of this example with content below,
+
+```text
+DJANGO_SECRET_KEY='django-insecure--oe!c8quc8k@5vr+b=1cqwpzge*%gvr*r$uycx@7fx0xlc%g#8'
+```
+
+### Python Env
 
 Create a Python virtual environment by using `uv`,
 
@@ -25,7 +32,7 @@ python manage.py runserver
 
 
 
-2. Node Env
+### Node Env
 
 Create a node environment with `webpack`, which compiles React, React-dom and React flow into `bundle.js` and integrates into Django template.
 
@@ -34,5 +41,11 @@ Create node environment,
 ```bash
 cd reactflow
 
+npm install
+```
+
+Then start a new terminal session for watching and compiling,
+
+```bash
 npm run dev
 ```
